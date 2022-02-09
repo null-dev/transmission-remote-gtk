@@ -71,4 +71,4 @@ jobs:
           name: artifacts
           retention-days: 5
           path: |
-            src/transmission-remote-gtk.exe
+            build
