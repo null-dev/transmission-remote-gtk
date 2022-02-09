@@ -61,6 +61,8 @@ jobs:
         run: meson build
       - name: build
         run: meson compile -C build
+      - name: show
+        run: ls -lah build
       - name: dist
         run: meson dist -C build
       - name: Archive build artifacts
@@ -69,4 +71,4 @@ jobs:
           name: artifacts
           retention-days: 5
           path: |
-            build/meson-dist/*.tar.xz
+            src/transmission-remote-gtk.exe
