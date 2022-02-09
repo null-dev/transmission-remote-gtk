@@ -63,3 +63,10 @@ jobs:
         run: meson compile -C build
       - name: dist
         run: meson dist -C build
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          retention-days: 5
+          path: |
+            build/meson-dist/*.tar.xz
